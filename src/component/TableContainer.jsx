@@ -192,10 +192,18 @@ const TableContainer = () => {
 
   return (
     <div>
-      {/* Button to trigger modal */}
-      <Button onClick={() => showModal("add")}>Add Product</Button>
+      {/* Button to trigger add modal */}
+      <div className="w-fit ml-auto mr-3">
+        <Button
+          onClick={() => showModal("add")}
+          type="primary"
+        >
+          Add Product
+        </Button>
+      </div>
       {/* Table component to display data */}
       <Table
+        rowKey="id"
         dataSource={dataSource}
         columns={columns}
       />
